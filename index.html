@@ -1,0 +1,166 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <title>bitter.cards</title>
+        <link rel="preload" as="font" href="style/css/fonts/bruta/BrutaProExtended-ExtraBold.woff2" type="font/woff2" crossorigin="anonymous">
+        <link rel="preload" as="font" href="style/css/fonts/inter/Inter-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+        <link rel="preload" as="font" href="style/css/fonts/inter/Inter-Medium.woff2" type="font/woff2" crossorigin="anonymous">
+
+        <link rel="shortcut icon" href="images/favicon.png" type="image/favicon.ico">
+        <link rel="stylesheet" href="style/css/slick.css">
+        <link rel="stylesheet" href="style/css/slick-theme.css">
+        <link rel="stylesheet" href="style/css/main.css">
+    </head>
+
+    <body>
+        <header class="header" id="site-header">
+            <div class="container">
+                <div class="headerBox flex">
+                    <div class="logo">
+                        <a href="#">
+                            <img src="images/bitter.cards.png">
+                        </a>
+                        <button id="burgerBtn" class="burgerBtn"><span></span> <span></span> <span></span></button>
+                    </div>
+                    <div class="textBox parallaxText">
+                                    <div class="md-6 mb-space">
+                                        <div class="cardBox">
+                                            <div class="infoBox">
+                                                <div class="title">
+                                                    <a href="https://bitter.cards/" target="_blank">
+                                                        <span style="border:2px solid #656D78; color:#00fe9c">&nbsp;  Join the Waiting List   📃&nbsp;</span> <i style="color:#00fe9c;" class="icon rArrowIcon"></i>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                    </div>
+                        </div>
+
+                            </div>
+                    
+                    <div class="navbar">
+                        <ul class="navList flex">
+                            <li> <a href="#features">features</a> </li>
+                            <li> <a href="https://bitter.cards/waitlist">waitlist</a> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="containerWrapper">
+            <div class="sectionWrapper bannerSection">
+                <div class="container">
+                    <div class="bannerBox reverse">
+                        <div class="imgWrapper">
+                            <img src="images/img-home-card.e85226fc.png">
+                            <div class="fixLogo">
+                                <div class="container relative">
+                                    <div class="specialLogo">
+                                        <img id="reload" src="images/handIcon.png" alt="Special Logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contentWrapper">
+                            <div class="box">
+                                <p class="smTitle">bitter.cards</p>
+                                <h1 class="title">(re) -</h1>
+                                <h1 class="title">defining</h1>
+                                <h1 class="title">crypto</h1>
+                                <h1 class="title">currency</h1>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="sectionWrapper experienceWrapper" id="features">
+                <div class="container">
+                    <div class="sectionHead">
+                        <div class="textBox parallaxText">
+                            <h3 class="title layer1">BITTER</h3>
+                            <h3 class="title layer2">IS</h3>
+                            <h3 class="title layer3">SWEET</h3>
+                        </div>
+                        
+                    </div>
+                    <div class="sectionWrapper numbersection">
+                        <div class="container">
+                            <div class="gridBox grid-MB">
+                                <div class="item">
+                                    <h4 class="number">01</h4>
+                                    <p class="text">LOW(est) Transaction Fees</p>
+                                </div>
+                                <div class="item">
+                                    <h4 class="number">02</h4>
+                                    <p class="text">Buy/Sell Crypto on a Click</p>
+                                </div>
+                                <div class="item">
+                                    <h4 class="number">03</h4>
+                                    <p class="text">An UPI like system for Blockchain</p>
+                                </div>
+                                <div class="item">
+                                    <h4 class="number">04</h4>
+                                    <p class="text">India's First Crypto Debit Card!</p>
+                                </div>
+                                <div class="item">
+                                    <h4 class="number">05</h4>
+                                    <p class="text">Insanely easy-to-use</p>
+                                </div>
+                                <div class="item">
+                                    <h4 class="number">06</h4>
+                                    <p class="text">Multi-Layered Security Standards</p>
+                                </div>
+                               
+                    </div>
+            
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footerBoxes">
+                    <br><br>
+                        <span>© 2021 - All Rights Reserves, By Respective Owners.</span>
+                        <br><br>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/gsap.min.js"></script>
+        <script type="text/javascript" src="js/ScrollMagic.js"></script>
+        <script type="text/javascript" src="js/animation.gsap.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript" src="js/custom.js"></script>
+
+        <script>
+        
+        $(document).ready(function(){
+        $("#burgerBtn").click(function(){
+        $(".navList").slideToggle(400)
+        $(this).toggleClass("active");
+        $('body').addClass("overhide")
+        });
+        $(".navList a").click(function(){
+            $(".navList").slideUp(400);
+            $("#burgerBtn").removeClass("active");
+        $('body').addClass("overhide")
+        });
+    });
+    
+
+    var position = $(window).scrollTop(); 
+
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if(scroll > position || scroll > 1) {
+            $(".navList").slideUp(400);
+        $("#burgerBtn").removeClass("active");
+        $('body').removeClass("overhide")
+        } 
+        position = scroll;
+    });
+
+
+        </script>
+    </body>
+    </html>
